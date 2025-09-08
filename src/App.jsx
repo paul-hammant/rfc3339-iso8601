@@ -8,6 +8,7 @@ import { FormatTable } from './Components/FormatTable';
 import { ISO8601aaS } from './Components/ISO8601aaS';
 import { TimeZonePicker } from './Components/TimeZonePicker';
 import { WhatIsThis } from './Components/WhatIsThis';
+import { CommonFormats } from './Components/CommonFormats';
 import { getBrowserTimezone } from './util/timeZone';
 import TimeZoneContext from './TimeZoneContext';
 import { mutualTypes } from './types';
@@ -110,6 +111,7 @@ function App ({
             }
           </>
         }
+        <CommonFormats whatIsThisQuery={whatIsThisQuery} />
         <h2 style={{marginBottom:0}}>Format Listing</h2>
         <p style={{marginBottom:0}}>Notes:</p>
         <ul>

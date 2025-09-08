@@ -58,8 +58,7 @@ function Diagram (props) {
     const isMatch = isFormatMatch(formatPattern);
     const textProps = {
       ...props,
-      fill: isMatch ? "#ff0000" : props.fill,
-      fontWeight: isMatch ? "bold" : props.fontWeight,
+      fontWeight: isMatch ? "bolder" : (props.fontWeight || "normal"),
       key: `${formatPattern}-${date.getTime()}-${whatIsThisQuery}` // Force re-render when date or query changes
     };
     return <text {...textProps}>{content}</text>;
